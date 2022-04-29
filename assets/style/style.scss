@@ -1,48 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@font-face{
+    font-family:"bellota bold";
+    src: url("../fonts/bellota/Bellota-Bold.otf");
+    font-weight: bold; 
+}
 
 $logoColor: #0d8187;
+$secondLogoColor: #15C5BD;
 $thirdColor: #FFF;
 $textColor: #303030;
 
+$inputRadius: 0.5em;
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+}
+
 body {
     color: $textColor;
-    background-color: $textColor;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    background: linear-gradient(90deg, rgba(21,197,189,1) 0%, rgba(13,129,135,1) 50%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header > .nav {
+    color: $thirdColor;
+    margin-top: 1%;
     display: flex;
+    width: auto;
+    justify-content: space-around;
+    font-family: 'bellota bold', Arial;
+}
+
+header {
+    background-color: $textColor;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3%;
 }
 
 input {
     color: $textColor;
-    border: 1px $thirdColor solid;
-    border-radius: 0.5em;
+    border: 1px gray double;
+    border-radius: $inputRadius;
 }
 
 .form {
-    background-color: white;
-    border: 1px solid $thirdColor;
+    background: rgba($textColor, $alpha: 0.9);
+    color: $thirdColor;
+    border: 2px $secondLogoColor double;
     border-radius: 1em 3em 1em 3em;
     padding: 2%;
-    height: 80%;
+    width: auto;
     margin: auto;
-    margin-top: 10%; 
+}
+
+textarea {
+    border-radius: 0.5em;
 }
 
 .h {
     font-weight: 3000;
+    color: $logoColor;
 }
 
 .middle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .firstColumn {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     width: 50%;
+}
+.firstColumn > * {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .gender {
@@ -52,4 +99,15 @@ input {
 
 .genderFlex {
     display: flex;
+    flex-direction: row;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.subject {
+    margin-top: 5%;
 }

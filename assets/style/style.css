@@ -1,32 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@font-face {
+  font-family: "bellota bold";
+  src: url("../fonts/bellota/Bellota-Bold.otf");
+  font-weight: bold;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
 body {
   color: #303030;
-  background-color: #303030;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  background: -webkit-gradient(linear, left top, right top, from(#15c5bd), color-stop(50%, #0d8187));
+  background: linear-gradient(90deg, #15c5bd 0%, #0d8187 50%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header > .nav {
+  color: #FFF;
+  margin-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'bellota bold', Arial;
+}
+
+header {
+  background-color: #303030;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3%;
 }
 
 input {
   color: #303030;
-  border: 1px #FFF solid;
+  border: 1px gray double;
   border-radius: 0.5em;
 }
 
 .form {
-  background-color: white;
-  border: 1px solid #FFF;
+  background: rgba(48, 48, 48, 0.9);
+  color: #FFF;
+  border: 2px #15C5BD double;
   border-radius: 1em 3em 1em 3em;
   padding: 2%;
-  height: 80%;
+  width: auto;
   margin: auto;
-  margin-top: 10%;
+}
+
+textarea {
+  border-radius: 0.5em;
 }
 
 .h {
   font-weight: 3000;
+  color: #0d8187;
 }
 
 .middle {
@@ -40,6 +84,7 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20px;
 }
 
 .firstColumn {
@@ -50,10 +95,24 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   width: 50%;
+}
+
+.firstColumn > * {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .gender {
@@ -70,5 +129,26 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.subject {
+  margin-top: 5%;
 }
 /*# sourceMappingURL=style.css.map */
